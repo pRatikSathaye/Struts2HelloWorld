@@ -15,8 +15,11 @@
                 class="com.pratik.HelloWorldAction"
                 method="execute">
             <interceptor-ref name="MyInterceptor"/>
+            <interceptor-ref name="params"/>
             <interceptor-ref name="timer"/>
-            <result name="success">/new.jsp</result>
+            <result name="success" type="freemarker">
+               <param name="location">/hello.fm</param>
+            </result>
             <result name="error">/access_denied.jsp</result>
         </action>
     </package>

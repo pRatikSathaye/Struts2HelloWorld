@@ -9,7 +9,9 @@ public class HelloWorldAction extends ActionSupport{
     private String name;
 
     public String execute() throws Exception{
+        System.out.println("In execute "+name);
         if ("SECRET".equals(name)) {
+            System.out.println("Valid name");
             return SUCCESS;
         }
         return ERROR;
