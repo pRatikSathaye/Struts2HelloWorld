@@ -5,12 +5,17 @@
 <struts>
     <constant name="struts.devMode" value="true" />
     <package name="helloworld" extends="struts-default">
+        <interceptors>
+            <interceptor name="MyInterceptor" class="com.pratik.MyInterceptor"/>
+        </interceptors>
         <action name="">
             <result>/index.jsp</result>
         </action>
         <action name="hello"
                 class="com.pratik.HelloWorldAction"
                 method="execute">
+            <interceptor-ref name="MyInterceptor"/>
+            <interceptor-ref name="timer"/>
             <result name="success">/new.jsp</result>
             <result name="error">/access_denied.jsp</result>
         </action>
