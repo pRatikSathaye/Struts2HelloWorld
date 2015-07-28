@@ -30,14 +30,4 @@ public class Employee extends ActionSupport{
         return SUCCESS;
     }
 
-    @Override
-    public void validate() {
-        if (name == null || name.trim().equals("")) {
-            addFieldError("name", "The name is required");
-        }
-
-        if (age < 28 || age > 65) {
-            addFieldError("age", "Age must be between 28 and 65");
-        }
-    }
 }
