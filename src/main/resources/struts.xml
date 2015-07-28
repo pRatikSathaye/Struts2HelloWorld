@@ -9,7 +9,7 @@
             <interceptor name="MyInterceptor" class="com.pratik.MyInterceptor"/>
         </interceptors>
         <action name="">
-            <result>/index.jsp</result>
+            <result>/login.jsp</result>
         </action>
         <action name="hello"
                 class="com.pratik.HelloWorldAction"
@@ -21,6 +21,15 @@
                <param name="location">/hello.fm</param>
             </result>
             <result name="error">/access_denied.jsp</result>
+        </action>
+
+        <action name="test" class="com.pratik.TestAction" method="execute">
+            <result name="success">/test.jsp</result>
+        </action>
+
+        <action name="login" class="com.pratik.LoginAction" method="execute">
+            <result name="success">/success.jsp</result>
+            <result name="error">/loginError.jsp</result>
         </action>
     </package>
 </struts>
