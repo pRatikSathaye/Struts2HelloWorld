@@ -9,7 +9,7 @@
             <interceptor name="MyInterceptor" class="com.pratik.MyInterceptor"/>
         </interceptors>
         <action name="">
-            <result>/login.jsp</result>
+            <result>/email.jsp</result>
         </action>
         <action name="hello"
                 class="com.pratik.HelloWorldAction"
@@ -30,6 +30,11 @@
         <action name="login" class="com.pratik.LoginAction" method="execute">
             <result name="success">/success.jsp</result>
             <result name="error">/loginError.jsp</result>
+        </action>
+
+        <action name="email" class="com.pratik.EmailerAction" method="execute">
+            <result name="success">/email_success.jsp</result>
+            <result name="error">/email_error.jsp</result>
         </action>
     </package>
 </struts>
