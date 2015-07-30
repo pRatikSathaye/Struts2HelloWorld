@@ -9,7 +9,7 @@
             <interceptor name="MyInterceptor" class="com.pratik.MyInterceptor"/>
         </interceptors>
         <action name="">
-            <result>/employee.jsp</result>
+            <result>/index.jsp</result>
         </action>
         <action name="hello"
                 class="com.pratik.HelloWorldAction"
@@ -40,6 +40,12 @@
         <action name="empinfo" class="com.pratik.Employee" method="execute">
             <result name="input">/employee.jsp</result>
             <result name="success">/success_emp.jsp</result>
+        </action>
+
+        <action name="system"
+                class="com.pratik.SystemDetails"
+                method="execute">
+            <result name="success">/System.jsp</result>
         </action>
     </package>
 </struts>
