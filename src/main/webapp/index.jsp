@@ -15,5 +15,8 @@
       <input type="submit" value="Say Hello"/>
    </form>
    <a href="system">System Action</a>
+   <a href="hello">Hello Action</a>
+   <a href="login.jsp">login</a>
+   <a href="/employee.jsp">Employee Details page</a>
 </body>
 </html>

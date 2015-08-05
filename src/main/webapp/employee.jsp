@@ -5,7 +5,7 @@
 <html>
 <head><title>Employee Form</title></head>
 <body>
-<s:form action="empinfo" method="post">
+<s:form action="empAnnotation" method="post">
     <s:textfield name="name" label="Name" size="20"/>
     <s:textfield name="age" label="Age" size="20"/>
     <s:submit name="submit" label="Submit" align="center"/>
